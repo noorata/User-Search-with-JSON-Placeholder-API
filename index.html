@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search for users</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="theme-toggle">
+        <button id="theme-toggle">Light Mode</button>
+    </div>
+    <h1>Search for users</h1>
+    <div class="searchContainer">
+        <input type="text" id="search-input" placeholder=" search for users by name...">
+        <button id="clear-button">Clear</button>
+    </div>
+
+    <div class="additional-features">
+        <label for="sort-select">Sort Result</label>
+        <select id="sort-select">
+            <option value="default">default</option>
+            <option value="name-asc">Name Ascending</option>
+            <option value="name-desc">Name Descending</option>
+        </select>
+
+        <div class="previous-searches">
+            <label for="previous-searches-select">previous search</label>
+            <select id="previous-searches-select">
+                <option value="">-- Choose --</option>
+            </select>
+        </div>
+    </div>
+
+    <div id="results-count"></div>
+    <ul id="results-list"></ul>
+
+    <div id="error-message"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

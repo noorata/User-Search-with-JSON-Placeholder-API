@@ -1,0 +1,87 @@
+body {
+    font-family: Arial, sans-serif;
+    direction: ltr;
+    margin: 20px;
+    color: #f988b8;
+    background-color: #1c1c1c;
+}
+
+h1 {
+    text-align: center;
+}
+
+.searchContainer {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#search-input {
+    width: 300px;
+    padding: 10px;
+}
+
+#clear-button {
+    padding: 10px 20px;
+}
+
+.additional-features {
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+#results-count {
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+#results-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+#results-list li {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+#error-message {
+    color: red;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.previous-searches{
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+/* dark-light button */
+body.light-theme {
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+body.light-theme #results-list li {
+    border-color: #333;
+}
+
+body.light-theme #error-message {
+    color: #b00020;
+}
+#theme-toggle {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #f988b8;
+    color: #fff;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#theme-toggle:hover {
+    background-color: #d56d93;
+}
