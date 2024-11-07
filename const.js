@@ -1,0 +1,10 @@
+export const searchInput = document.getElementById('searchInput');
+export const clearButton = document.getElementById('clearButton');
+export const resultsBody = document.getElementById('resultsBody');
+export const errorMessage = document.getElementById('errorMessage');
+export const resultsCount = document.getElementById('resultsCount');
+export const themeToggleButton = document.getElementById('themeToggle');
+export const searchSuggestions = document.getElementById('searchSuggestions');
+export const nameHeader = document.getElementById('nameHeader');
+export const emailHeader = document.getElementById('emailHeader');
+export const addressHeader = document.getElementById('addressHeader');

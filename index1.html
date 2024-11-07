@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search for users</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+          integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="themeToggle">
+        <button id="themeToggle">Light Mode</button>
+    </div>
+
+    <div id="responsedResult">
+        <h1>Search for users</h1>
+        <div class="searchContainer">
+            <input type="text" id="searchInput" placeholder="Search for users by name..." autocomplete="off">
+            <button id="clearButton">Clear</button>
+            <ul id="searchSuggestions" class="suggestions"></ul>
+        </div>
+
+        <div id="resultsCount"></div>
+
+        <table id="resultsTable">
+            <thead>
+                <tr>
+                    <th id="nameHeader">Name <i class="fa-solid fa-sort"></i></th>
+                    <th id="emailHeader">Email <i class="fa-solid fa-sort"></i></th>
+                    <th id="addressHeader">Address <i class="fa-solid fa-sort"></i></th>
+                </tr>
+            </thead>
+            <tbody id="resultsBody">
+            </tbody>
+        </table>  
+        <div id="errorMessage"></div>
+        <ul id="resultsList"></ul>
+    </div>
+
+    <script type="module" src="script1.js"></script>
+</body>
+</html>

@@ -15,63 +15,141 @@ h1 {
     margin-bottom: 20px;
 }
 
-#search-input {
+#searchInput {
     width: 300px;
     padding: 10px;
 }
 
-#clear-button {
+#clearButton {
     padding: 10px 20px;
 }
 
-.additional-features {
-    text-align: center;
-    margin-bottom: 20px;
-    padding: 20px;
-}
-
-#results-count {
+#resultsCount {
     text-align: center;
     margin-bottom: 10px;
     font-weight: bold;
 }
 
-#results-list {
+#resultsList {
     list-style-type: none;
     padding: 0;
 }
 
-#results-list li {
+#resultsList li {
     border: 1px solid #ccc;
     padding: 10px;
     margin-bottom: 10px;
 }
 
-#error-message {
+#errorMessage {
     color: red;
     text-align: center;
     margin-top: 20px;
 }
 
-.previous-searches{
-    text-align: center;
-    margin-bottom: 20px;
-    padding: 20px;
+.searchContainer {
+    position: relative;
 }
+
+.suggestions {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    max-height: 300px;
+    overflow-y: auto;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    z-index: 1000;
+    display: none; /* Hidden by default */
+}
+
+.suggestions li {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.suggestions li:hover,
+.suggestions li.active {
+    background-color: #f0f0f0;
+}
+
+.suggestions li i {
+    margin-right: 10px;
+    color: #606060;
+}
+
+.suggestions li .suggestion-text {
+    flex-grow: 1;
+}
+
+.searchContainer input:focus + .suggestions {
+    display: block;
+}
+
+#resultsTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#resultsTable th, #resultsTable td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+#resultsTable th {
+    cursor: pointer;
+    position: relative;
+}
+
+#resultsTable th i {
+    margin-left: 5px;
+    color: #888;
+}
+
+#resultsTable th.sorted-asc i {
+    transform: rotate(180deg);
+}
+
+#resultsTable tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+#resultsTable tr:hover {
+    background-color: #f1f1f1;
+}
+
+#resultsTable th.active {
+    background-color: #f1f1f1;
+}
+
+/* Error message */
+#errorMessage {
+    color: red;
+    margin-top: 10px;
+}
+
 /* dark-light button */
-body.light-theme {
+body.lightTheme {
     color: #333;
     background-color: #f4f4f4;
 }
 
-body.light-theme #results-list li {
+body.lightTheme #resultsList li {
     border-color: #333;
 }
 
-body.light-theme #error-message {
+body.lightTheme #errorMessage {
     color: #b00020;
 }
-#theme-toggle {
+#themeToggle {
     padding: 10px 20px;
     font-size: 16px;
     border: none;
@@ -82,6 +160,6 @@ body.light-theme #error-message {
     transition: background-color 0.3s, color 0.3s;
 }
 
-#theme-toggle:hover {
+#themeToggle:hover {
     background-color: #d56d93;
 }

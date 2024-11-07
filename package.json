@@ -1,0 +1,12 @@
+{
+  "name": "task2asal",
+  "version": "1.0.0",
+  "main": "script.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index1.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
