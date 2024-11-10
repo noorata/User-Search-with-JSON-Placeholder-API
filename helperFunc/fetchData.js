@@ -21,7 +21,6 @@ export async function fetchUsers() {
     displayError('An error occurred while fetching data.');
     console.error('Error fetching users:', error);
   }
-  return [];
 }
 //error messages from the displayError function appear in the HTML element with id="errorMessage"
 function displayError(message) {
