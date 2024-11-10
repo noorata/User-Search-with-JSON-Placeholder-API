@@ -18,7 +18,6 @@ let filteredUsers = [];
 let searchHistotyList = [];
 let currentSortColumn = null;
 let currentSortOrder = 'asc';
-let suggestionIndex = -1;
 function searchUsers(query) {
     if (!query) {
         filteredUsers = [];
@@ -123,7 +122,6 @@ const debouncedSearchUsers = debounce(() => {
 
 //debounced of the updateSuggestions function
 const debouncedUpdateSuggestions = debounce(() => {
-    suggestionIndex = -1;
     updateSuggestions();
 }, 300);
 
@@ -159,7 +157,6 @@ function clearSearch() {
     searchInput.value = '';
     filteredUsers = [];
     displayResults();
-    suggestionIndex = -1;
 }
 
 function toggleTheme() {
